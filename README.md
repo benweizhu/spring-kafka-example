@@ -40,3 +40,13 @@ kafka-console-producer.sh --broker-list localhost:9092 --topic order
 ```bash
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --from-beginning
 ```
+
+```bash
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --group my-group
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --group my-second-group --from-beginning
+
+// try it again
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --group my-second-group --from-beginning
+```
+Kafka stores the offsets at which consumer group has been reading
