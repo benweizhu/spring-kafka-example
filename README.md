@@ -50,3 +50,9 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --grou
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --group my-second-group --from-beginning
 ```
 Kafka stores the offsets at which consumer group has been reading
+
+```bash
+kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+
+kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group my-second-group
+```
