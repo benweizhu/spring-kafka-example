@@ -30,5 +30,13 @@ kafka-topics.sh --zookeeper zookeeper:2181 --topic order --create --partitions 3
 ```
 
 ```bash
-kafka-console-producer.sh --broker-list 192.168.0.101:9092 --topic order
+kafka-console-producer.sh --broker-list localhost:9092 --topic order
+
+
+>hello benwei
+
+```
+
+```bash
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order --from-beginning
 ```
