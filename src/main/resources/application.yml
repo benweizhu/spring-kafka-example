@@ -1,6 +1,9 @@
 spring:
   application:
     name: customer
+  kafka:
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    bootstrap-servers: 192.168.1.108:9092
 kafka:
-  brokers: 192.168.99.1:9092
-  topic: order-local
+  topic: order
